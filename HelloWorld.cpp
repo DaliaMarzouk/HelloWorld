@@ -38,6 +38,7 @@ public:
 		}
 		std::clog << "fileView Intialized successfully" << std::endl;
 	}
+	~HelloWorldFileView(){delete fs;}
 	virtual void writeOutput(const std::string divisibleBy)
 	{
 		
@@ -45,10 +46,11 @@ public:
 		else{std::cerr << divisibleBy << std::endl;}
 
 	}
-	virtual void lgInfo(const std::string message){std::clog << message << std::endl;}
+	virtual void logInfo(const std::string message){std::clog << message << std::endl;}
 private:
 	std::ofstream* fs;
 	bool fileIsOpened = true; //flag referes to if the output stream was opened successfully or not
+
 };
 
 
@@ -99,7 +101,7 @@ int main()
 
 	//test the fileView
 	HelloWorldFileView view_1;
-	HelloWorldModel model_1(1, 100, &view);
+	HelloWorldModel model_1(1, 100, &view_1);
 	model_1.loop();
 
 	return 0;
