@@ -1,0 +1,6 @@
+- To me the code needs to be supported with comments for functions and classes and the core functionality steps. This helps to make it more redable and maintainable
+- A good idea in the code is the (try, catch) block that makes the code reliable fo the failure in the text file intialization
+- I finds that it is a good practice to separate the core functionality of the code from the viewing tool. So, I've separated the code to model and view classes. This step adds more flixability, maintainability and testability.
+- Because we can not predict all the output tools we can use in the future I've created an abstract class that acts as a prototype for the output tool and let the different output tools derived classes which make public inheritance from the abstract class. This would make the could more applicable to be refactorable.
+**** the class diagram of the refactored code appears in "HelloWorldGenerator.png" file
+- I have transformed the name of functions to be more readable. Also, the (DoNext) function was transformed to be private instead of being public
